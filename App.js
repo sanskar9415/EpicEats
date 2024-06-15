@@ -28,10 +28,13 @@
 // imported react and reactdom from nodemodule folder
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// React.createElement() => object => HTML(DOM)
 const heading = React.createElement(
     "h1",
     {
       id: "title",
+      key: "h1"
     },
     "heading"
   );
@@ -39,9 +42,11 @@ const heading = React.createElement(
     "h1",
     {
       id: "title",
+      key: "h2"
     },
     "heading1"
   );
+  console.log(heading);
   
   const container = React.createElement(
     "div",

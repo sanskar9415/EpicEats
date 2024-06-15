@@ -2,18 +2,23 @@
   "name": "learning-react",
   "version": "1.0.0",
   "description": "react course",
-
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
