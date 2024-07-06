@@ -1,39 +1,71 @@
-// imported react and reactdom from nodemodule folder
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// create header element using JSX
-// JSX => React.createElement => Object => HTML (DOM) (babel does all the conversion)
+/* My Food App structure will look like this, 
+            1) Header
+                - Logo
+                - Nav Items(right side)
+                - Cart
+            2) Body
+                - Search bar
+                - Restaurants List
+                    - Restaurant card
+                        - Image
+                        - Name
+                        - Rating
+            3) Footer
+                - Links
+                - Copyrights
+       
+*/
 
-const heading = <h1 id = "title" key = "h2">Namaste react</h1>
 
-// React Component 
-// Functional component - new way of writing component 
-// Class component - old way of writing component
-  
+const Title = () => (
+  <a href="/">
+    <img 
+  className = 'logo' 
+  alt="logo"
+  src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj" 
+  />
+  </a>
+);
 
-// Title component is functional component
-const Title = () => {
+const Header = function (){
   return (
-    <h1 id="title" key="title">Namaste React</h1>
+    <div className='header'>
+      <Title/>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>cart</li>
+        </ul>
+      </div>
+    </div>
   )
 }
 
-// Header component is functional component
-const HeaderComponent = function (){
+const Body = () => {
   return (
-    <div>
-      <Title/>
-      {/* we can also use <Title()> */}
-      {/* we can also use <Title></Title> */}
-      {console.log(10)}
-    <h1>Namaste React Functional component</h1>
-    <h2>This is h2 tag</h2>
-    </div>
+    <h4>Body</h4>
   )
+}
+const Footer = () => {
+  return <h4>Footer</h4>
+}
+
+const AppLayout = () => {
+  return (
+    <>
+    <Header/>
+    <Body/>
+    <Footer/>
+    </>
+  );
 }
 
   // create root using createRoot
   const root = ReactDOM.createRoot(document.getElementById("root"));
   // passing react element inside root
-  root.render(<HeaderComponent/>);
+  root.render(<AppLayout/>);
