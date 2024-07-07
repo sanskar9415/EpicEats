@@ -18,3 +18,24 @@
 .nav-items > ul > li{
     padding: 10px;
 }
+
+.restaurant-list{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.card{
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.card > img{
+    width: 100%;
+    border-radius: 10px;
+}

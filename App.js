@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import restaurantList from './dummy_data';
 
 /* My Food App structure will look like this, 
             1) Header
@@ -46,11 +47,38 @@ const Header = function (){
   )
 }
 
+// Restaurant card component: Image, name, cuisine
+const RestaurantCard = ({
+  cloudinaryImageId,
+  name,
+  cuisines,
+  area,
+  lastMileTravelString,
+  costForTwoString,
+  avgRating,
+}) => {
+  return (
+    <div className="card">
+      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
+         + cloudinaryImageId} />
+      <h3>{name}</h3>
+      <h5>{cuisines.join(", ")}</h5>
+      <h5>{lastMileTravelString}</h5>
+    </div>
+  );
+};
+
 const Body = () => {
   return (
-    <h4>Body</h4>
-  )
-}
+    <div className="restaurant-list">
+      {restaurantList.map((restaurant) => {
+        return <RestaurantCard key={restaurant.data.id} {...restaurant.data} />;
+      })}
+    </div>
+  );
+};
+
+
 const Footer = () => {
   return <h4>Footer</h4>
 }
