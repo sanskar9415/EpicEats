@@ -37,6 +37,7 @@
     background-color: #fff;
     padding: 10px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -82,4 +83,17 @@
     margin-top: 10px;
     font-size: 14px;
     color: #666;
+}
+
+.shimmer {
+    width: 200px;
+    height: 23rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
 }
