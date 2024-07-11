@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Title = () => (
     <a href="/">
       <img 
@@ -16,10 +18,10 @@ const Header = function (){
         <Title/>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>cart</li>
+            <li><Link className='link' to = "/">Home</Link></li>
+            <li><Link className='link' to = "/about">About</Link></li>
+            <li><Link className='link' to = "/contact">Contact</Link></li>
+            <li><Link className='link' to = "/">Cart</Link></li>
           </ul>
         </div>
       </div>

@@ -17,6 +17,9 @@
 
 .nav-items > ul > li{
     padding: 10px;
+    font-size: 1.25rem;
+    font-family: 'Arial', sans-serif;
+    color: #0a0a0a;
 }
 
 .restaurant-list{
@@ -96,4 +99,13 @@
     padding: 10px;
     margin: 10px;
     cursor: pointer;
+}
+
+.link {
+    color: #0a0a0a;
+    text-decoration: none; 
+    cursor: pointer;
+}
+.link:hover {
+    color: #aaaaaa;
 }
