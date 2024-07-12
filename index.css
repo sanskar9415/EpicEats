@@ -58,12 +58,14 @@
 
 .card-content {
     padding: 16px;
+    text-decoration: none;
 }
 
 .card-title {
     margin: 0;
     font-size: 16px;
     color: #333;
+    text-decoration: none;
 }
 
 .card-rating-cost-for-two {
@@ -108,4 +110,72 @@
 }
 .link:hover {
     color: #aaaaaa;
+}
+.menu-shimmer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the container takes full viewport height */
+}
+.menu-item-shimmer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    padding: 2rem;
+    width: 40rem;
+    height: 5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.menu-item-shimmer-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-shimmer-content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.menu-item-name-shimmer-loader {
+    border-radius: 2%;
+    width: 10rem;
+    height: 0.2rem;
+    padding: 5px;
+    margin: 5px;
+    animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
+}
+
+.menu-item-cusines-shimmer-loader {
+    border-radius: 2%;
+    width: 20rem;
+    height: 0.7rem;
+    padding: 5px;
+    margin: 15px 5px;
+    animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
+}
+
+.menu-item-image-shimmer-loader {
+    border-radius: 5%;
+    width: 6rem;
+    height: 3rem;
+    padding: 5px;
+    margin: 15px 5px;
+    animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
+}
+
+@keyframes menu-item-shimmer-animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
 }
