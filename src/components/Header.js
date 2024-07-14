@@ -14,10 +14,10 @@ const Title = () => (
 
 const Header = function (){
     return (
-      <div className='header'>
+      <div className='flex justify-between shadow-lg  p-1 bg-gray-200 sticky top-0'>
         <Title/>
         <div className="nav-items">
-          <ul>
+          <ul className='flex py-3 pr-6'>
             <li><Link className='link' to = "/">Home</Link></li>
             <li><Link className='link' to = "/about">About</Link></li>
             <li><Link className='link' to = "/contact">Contact</Link></li>

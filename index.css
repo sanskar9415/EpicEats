@@ -1,14 +1,9 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    border: 1px solid black;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.nav-items > ul{
-    list-style-type: none;
-    display: flex;
-}
+
+
 
 .logo{
     padding-left: 10px;
