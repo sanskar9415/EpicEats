@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
         const json = await data.json();
         // console.log(json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
         // setRestaurant(json?.data?.cards[2]?.card?.card?.info);
-        console.log(json?.data?.cards[2].card.card.info);
+        // console.log(json?.data?.cards[2].card.card.info);
         setRestaurant(json);
     }
     if(restaurant === null) return <MenuShimmer/>;
@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
       (c) => 
        c?.card?.card?.["@type"] == 'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory'
     );
-    console.log(categories);
+    // console.log(categories);
 
   return  (
     <div className="text-center mt-8">
