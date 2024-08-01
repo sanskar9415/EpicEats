@@ -2,6 +2,7 @@ import React from 'react'
 import { IMG_CDN_URL } from '../constants';
 import nonVeg from '../assets/nonVeg.png'
 import veg from '../assets/veg.png'
+import e from '../assets/e.png'
 
 export const ItemList = ({items}) => {
     console.log(items);
@@ -21,9 +22,19 @@ export const ItemList = ({items}) => {
                 <p className='text-xs'>{item?.card?.info.description}</p>
                 </div>
                 <div className='w-3/12  items-center'>
-                <img 
-                className=' rounded-3xl object-cover w-full h-36'
-                src= { IMG_CDN_URL + item?.card?.info.imageId } alt="img" />
+                {item?.card?.info.imageId ? (
+              <img
+                className='rounded-3xl object-cover w-full h-36'
+                src={IMG_CDN_URL + item?.card?.info.imageId}
+                alt=""
+              />
+            ) : (
+              <img
+                className='rounded-3xl object-cover w-full h-36'
+                src={e} 
+                alt=""
+              />
+            )}
                 </div>
             </div>
         ))}
