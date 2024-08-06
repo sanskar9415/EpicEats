@@ -28,15 +28,14 @@ const Body = () => {
       );
       const json = await response.json();
       setAllRestaurants(
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setFilteredRestaurants(
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
-      // console.log( json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-      //   ?.restaurants);
+      // console.log( json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (error) {
       console.error("Failed to fetch restaurants", error);
     }
