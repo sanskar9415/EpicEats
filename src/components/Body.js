@@ -24,7 +24,7 @@ const Body = () => {
     console.log("hii");
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6749206&lng=77.1794302&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://epiceats-psmn.onrender.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6749206&lng=77.1794302&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json = await response.json();
       setAllRestaurants(
