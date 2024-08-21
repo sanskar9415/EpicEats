@@ -1,4 +1,4 @@
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## EpicEats
 Order food from the comfort of your home, we show the latest restaurants available in your city, with all the details. 
@@ -11,7 +11,7 @@ Pick a dish, add to cart, place order, get delivered.
 4. Bundler: Parcel
 5. Authentication: Firebase-Auth
 6. State Management: Redux Toolkit
-7. Cors anywhere
+7. Cors anywhere - Deployed on render
 
 ## Working of project
 1. We fetch the restaurants of your city from Swiggy API, getting the live data.
