@@ -1,7 +1,7 @@
 ![alt text](image.png)
 
 ## EpicEats
-Order food from the confort of your home, we show the latest restaurants available in your city, with all the details. 
+Order food from the comfort of your home, we show the latest restaurants available in your city, with all the details. 
 Pick a dish, add to cart, place order, get delivered.
 
 ## Tech - Stack
