@@ -29,7 +29,7 @@ Pick a dish, add to cart, place order, get delivered.
 2. Cart data is not stored anywhere, it should be in local storage for not logged in users to avoid losing on refresh page.
 3. While Signing up, user name is not displayed in the profile point instantly, needs a refresh. It doesn't happen in logging in process.
 4. Improve the design, take user address and payment details.
-5. Add feature to search different cities, currently working for Prayagraj only.
+5. Add feature to search different cities, currently working for Delhi only.
 
 ## How to run on your local
 1. Clone the repository 
