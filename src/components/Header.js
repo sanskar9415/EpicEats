@@ -19,7 +19,7 @@ const Title = () => (
 
 const Header = function (){
     return (
-      <div className='flex justify-between shadow-lg  p-1 bg-gray-200 sticky top-0'>
+      <div className='flex justify-between shadow-lg  p-1 bg-gray-200 sticky top-0 z-40'>
         <Title/>
         <div className="nav-items">
           <ul className='flex py-3 pr-6 '>

@@ -34,7 +34,7 @@ const RestaurantMenu = () => {
         <h1 className="font-bold text-2xl mb-1">{name}</h1>
         <h3 className="text-gray-700"> {cuisines.join(", ")}</h3>
         {categories.map((category) => {
-          return <RestaurantCategory data = {category?.card?.card}/>
+          return <RestaurantCategory key = {category?.card?.card?.title} data = {category?.card?.card}/>
           //we can use () for implicit return
         })}
 

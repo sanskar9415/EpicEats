@@ -9,7 +9,7 @@ export const ItemList = ({items}) => {
   return (
     <div>
         {items.map((item) => (
-            <div key = {item?.card?.info?.id} className='p-2 m-2 border-b-2 text-left flex justify-between'>
+            <div key = {item?.card?.info?.id} className='p-2 m-2 border-b-2 text-left flex justify-between pb-4'>
                 <div className='w-9/12 p-2'>
                 <div className='py-2'>
                     <div>{item?.card?.info?.itemAttribute?.vegClassifier == 'VEG' ? 
@@ -22,6 +22,11 @@ export const ItemList = ({items}) => {
                 <p className='text-xs'>{item?.card?.info.description}</p>
                 </div>
                 <div className='w-3/12  items-center'>
+                <div className='absolute'>
+                  <button className='p-2 bg-white shadow-lg mx-16 text-green-500 font-bold rounded-lg mt-28'>
+                    Add +
+                  </button>
+                </div>
                 {item?.card?.info.imageId ? (
               <img
                 className='rounded-3xl object-cover w-full h-36'

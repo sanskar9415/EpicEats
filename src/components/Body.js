@@ -46,7 +46,7 @@ const Body = () => {
   ) : (
     <>
       <form
-        className="max-w-md mx-auto mt-4 shadow-md rounded-md sticky top-5"
+        className="max-w-md mx-auto mt-4 shadow-md rounded-md sticky top-5 z-50"
         onSubmit={(e) => {
           e.preventDefault();
           const data = filterData(searchText, allRestaurants);
