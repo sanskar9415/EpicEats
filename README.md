@@ -1,3 +1,5 @@
+It may take time to load data as it is fetching from swiggy official API. We are working to optimize it.
+
 ![alt text](image-1.png)
 
 ## EpicEats
