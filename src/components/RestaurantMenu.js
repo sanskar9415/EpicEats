@@ -6,6 +6,7 @@ import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
     const { resId } = useParams();
     const [restaurant, setRestaurant] = useState(null);
+    const [showIndex, setShowIndex] = useState(null);
     
     useEffect(() => {
         getRestaurantsInfo();
@@ -33,8 +34,13 @@ const RestaurantMenu = () => {
     <div className="text-center mt-8">
         <h1 className="font-bold text-2xl mb-1">{name}</h1>
         <h3 className="text-gray-700"> {cuisines.join(", ")}</h3>
-        {categories.map((category) => {
-          return <RestaurantCategory key = {category?.card?.card?.title} data = {category?.card?.card}/>
+        {categories.map((category, index) => {
+          return <RestaurantCategory
+           key = {category?.card?.card?.title}
+           data = {category?.card?.card}
+           showItems = {index===showIndex ? true : false}
+           setShowIndex = {() => setShowIndex(index === showIndex ? null : index)}
+           />
           //we can use () for implicit return
         })}
 
