@@ -23,9 +23,12 @@ const Body = () => {
   async function getRestaurants() {
     console.log("hii");
     try {
-      const response = await fetch(
-        "https://epiceats-psmn.onrender.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6749206&lng=77.1794302&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      );
+      const response = await fetch('https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.61450&lng=77.30630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING', {
+        headers: {
+          'Origin': 'https://cors-anywhere.herokuapp.com',  // Or whatever origin you are using
+          'x-requested-with': 'XMLHttpRequest' // Or you can use this header
+        }
+})
       const json = await response.json();
       setAllRestaurants(
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
