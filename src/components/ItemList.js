@@ -3,9 +3,15 @@ import { IMG_CDN_URL } from '../constants';
 import nonVeg from '../assets/nonVeg.png'
 import veg from '../assets/veg.png'
 import e from '../assets/e.png'
+import { useDispatch } from 'react-redux';
+import { addItem } from '../utils/cartSlice';
 
 export const ItemList = ({items}) => {
-    console.log(items);
+    const dispatch = useDispatch()
+    const handleClickOnAdd = (detail) => {
+      dispatch(addItem(detail))
+      console.log(detail)
+  }
   return (
     <div>
         {items.map((item) => (
@@ -23,7 +29,9 @@ export const ItemList = ({items}) => {
                 </div>
                 <div className='w-3/12  items-center'>
                 <div className='absolute'>
-                  <button className='p-2 bg-white shadow-lg mx-16 text-green-500 font-bold rounded-lg mt-28'>
+                  <button className='p-2 bg-white shadow-lg mx-16 text-green-500 font-bold rounded-lg mt-28'
+                  onClick={() => handleClickOnAdd(item?.card?.info)}
+                  >
                     Add +
                   </button>
                 </div>

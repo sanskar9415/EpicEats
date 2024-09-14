@@ -174,3 +174,22 @@
         background-color: hsl(200, 20%, 95%);
     }
 }
+
+.cart-items-count {
+    position: absolute;
+    font-size: 12px;
+    background-color: black;
+    border-radius: 100%;
+    color: white;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-40%, -90%);
+  }
+  .cart-icon {
+    position: relative;
+  }
