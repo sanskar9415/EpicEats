@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import "../styles/cart.css"
-import CartItem from "./CartItem";
+import CartItem from "./cartItem";
 import BillDetails from "./BillDetails";
 import CancellationPolicy from "./CancellationPolicy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
