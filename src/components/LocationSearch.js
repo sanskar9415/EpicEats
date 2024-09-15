@@ -15,23 +15,27 @@ const LocationSearch = () => {
     const { data: suggestedPlaces } = useFetch(autoCompleteUrl)
     const { data: recommendedAddress } = useFetch(addressRecommendUrl)
     const [searchTerm, setSearchTerm] = useState('')
+    
     const debounceSearchText = debounce(() => {
         setAutoCompleteUrl(`${LOCATION_SUGGESTION_API_END_POINT}${searchTerm}`)
     }, DEBOUNCE_DELAYS.SEARCH_INPUT);
+    
     useEffect(() => {
         debounceSearchText();
         return () => debounceSearchText.cancel();
     }, [searchTerm]);
+    
     const handleSelectedLocation = async ({ placeId }) => {
         setAddressRecommendUrl(`${ADDRESS_RECOMMEND_API_END_POINT}${placeId}`)
-        await new Promise(resolve => setTimeout(resolve, 200));
-        // Unamount the location component after some delay otherwise const { data: recommendedAddress } = useFetch(addressRecommendUrl) is not called
-        dispatch(toggleLocation())
-        await new Promise(resolve => setTimeout(resolve, 100));
     }
-    if(recommendedAddress?.length){
-        dispatch(setAddress(recommendedAddress[0] || {}))
-    }
+    
+    useEffect(() => {
+        if (recommendedAddress?.length) {
+            dispatch(setAddress(recommendedAddress[0] || {}))
+            dispatch(toggleLocation())  // Close after setting the address
+        }
+    }, [recommendedAddress, dispatch]);
+    
     return (
         <div className="location-container">
             <div className="close">
@@ -47,13 +51,12 @@ const LocationSearch = () => {
                         placeholder="Search for area, street name.."
                         value={searchTerm}
                         onChange={(event) => setSearchTerm(event.target.value)}
-                    >
-                    </input>
+                    />
                 </div>
             </div>
             <div className="suggestion-list">
-                {(suggestedPlaces || [])?.map(({ place_id : placeId, structured_formatting: { main_text : mainText, secondary_text : address } }) => (
-                    <div className="place" key={placeId} onClick={() => handleSelectedLocation({ placeId})}>
+                {(suggestedPlaces || [])?.map(({ place_id: placeId, structured_formatting: { main_text: mainText, secondary_text: address } }) => (
+                    <div className="place" key={placeId} onClick={() => handleSelectedLocation({ placeId })}>
                         <div className="title">
                             {mainText}
                         </div>
@@ -66,4 +69,4 @@ const LocationSearch = () => {
     )
 }
 
-export default LocationSearch
+export default LocationSearch;

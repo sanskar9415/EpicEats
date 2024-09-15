@@ -24,7 +24,7 @@ const Body = () => {
   useEffect(() => {
     if (currentAddress?.geometry) {
         const { geometry: { location: { lat, lng } } } = currentAddress
-        const newUrl = `${SWIGGY_RESTAURANT_API_END_POINT}&lat=${lat}&lng=${lng}`
+        const newUrl = `${RAILWAY_CORS_PROXY}/${SWIGGY_RESTAURANT_API_END_POINT}&lat=${lat}&lng=${lng}`
         setRestaurantUrl(newUrl)
     }
 }, [currentAddress])
