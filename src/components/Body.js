@@ -3,6 +3,8 @@ import RestaurantCard from "./RestaurantCard ";
 import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
+import { DEFAULT_LAT_LANG, SWIGGY_RESTAURANT_API_END_POINT } from "../constants";
+import { useSelector } from "react-redux";
 
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
@@ -12,18 +14,31 @@ function filterData(searchText, restaurants) {
 }
 
 const Body = () => {
+  const RAILWAY_CORS_PROXY = 'https://web-production-d3380.up.railway.app';
   const [searchText, setSearchText] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [restaurantUrl, setRestaurantUrl] = useState(`${RAILWAY_CORS_PROXY}/${SWIGGY_RESTAURANT_API_END_POINT}${DEFAULT_LAT_LANG}`)
+  const currentAddress = useSelector((store) => store.location.address);
+
+  useEffect(() => {
+    if (currentAddress?.geometry) {
+        const { geometry: { location: { lat, lng } } } = currentAddress
+        const newUrl = `${SWIGGY_RESTAURANT_API_END_POINT}&lat=${lat}&lng=${lng}`
+        setRestaurantUrl(newUrl)
+    }
+}, [currentAddress])
 
   useEffect(() => {
     getRestaurants();
-  }, []);
+  }, [restaurantUrl]);
 
   async function getRestaurants() {
     console.log("hii");
     try {
-      const response = await fetch('https://web-production-d3380.up.railway.app/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.61450&lng=77.30630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+      console.log("restaurant url", restaurantUrl)
+      const response = await fetch(restaurantUrl);
+      console.log(response)
       const json = await response.json();
       setAllRestaurants(
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
@@ -32,7 +47,7 @@ const Body = () => {
       setFilteredRestaurants(
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
-      );
+      );  
       // console.log( json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (error) {
       console.error("Failed to fetch restaurants", error);

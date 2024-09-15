@@ -10,15 +10,18 @@ import RestaurantMenu from './components/RestaurantMenu';
 import { Provider, useSelector } from 'react-redux';
 import appStore from './utils/appStore';
 import Cart from './components/cart';
+import LocationSearch from './components/LocationSearch';
 
 const AppLayout = () => {
   const isCartVisible = useSelector(store => store.cart.isVisible);
+  const isLocationVisible = useSelector(store => store.location.isVisible)
   
   return (
     <>
       <Header />
       <Outlet />
       {isCartVisible && <Cart />}
+      {isLocationVisible && <LocationSearch />}
       <Footer />
     </>
   );

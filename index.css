@@ -1,195 +1,195 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 
 
 
 
-.logo{
-    padding-left: 10px;
-    width: 100px;
-}
-
-.nav-items > ul > li{
-    padding: 10px;
-    font-size: 1.25rem;
-    font-family: 'Arial', sans-serif;
-    color: #0a0a0a;
-}
-
-.restaurant-list{
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-}
-
-
-.card {
-    width: 200px;
-    height: 23rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    background-color: #fff;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    display: block;
-}
-
-.card-content {
-    padding: 16px;
-    text-decoration: none;
-}
-
-.card-title {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-    text-decoration: none;
-}
-
-.card-rating-cost-for-two {
-    margin: 4px 0;
-    font-size: 16px;
-    color: #080707;
-    display: flex;
-    justify-content: space-between;
-}
-
-.star-rating {
-    width: 2.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card-subtitle {
-    margin: 0;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-.shimmer {
-    width: 200px;
-    height: 23rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    background-color: #eee;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.link {
-    color: #0a0a0a;
-    text-decoration: none; 
-    cursor: pointer;
-}
-.link:hover {
-    color: #aaaaaa;
-}
-.menu-shimmer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Ensure the container takes full viewport height */
-}
-.menu-item-shimmer-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem;
-    padding: 2rem;
-    width: 40rem;
-    height: 5rem;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.menu-item-shimmer-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.menu-item-shimmer-content-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.menu-item-name-shimmer-loader {
-    border-radius: 2%;
-    width: 10rem;
-    height: 0.2rem;
-    padding: 5px;
-    margin: 5px;
-    animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
-}
-
-.menu-item-cusines-shimmer-loader {
-    border-radius: 2%;
-    width: 20rem;
-    height: 0.7rem;
-    padding: 5px;
-    margin: 15px 5px;
-    animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
-}
-
-.menu-item-image-shimmer-loader {
-    border-radius: 5%;
-    width: 6rem;
-    height: 3rem;
-    padding: 5px;
-    margin: 15px 5px;
-    animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
-}
-
-@keyframes menu-item-shimmer-animation {
-    0% {
-        background-color: hsl(200, 20%, 70%);
+    .logo{
+        padding-left: 10px;
+        width: 100px;
     }
 
-    100% {
-        background-color: hsl(200, 20%, 95%);
+    .nav-items > ul > li{
+        padding: 10px;
+        font-size: 1.25rem;
+        font-family: 'Arial', sans-serif;
+        color: #0a0a0a;
     }
-}
 
-.cart-items-count {
-    position: absolute;
-    font-size: 12px;
-    background-color: black;
-    border-radius: 100%;
-    color: white;
-    width: 16px;
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 50%;
-    transform: translate(-40%, -90%);
-  }
-  .cart-icon {
-    position: relative;
-  }
+    .restaurant-list{
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+
+    .card {
+        width: 240px;
+        height: 23rem;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        background-color: #fff;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .card-content {
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .card-title {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .card-rating-cost-for-two {
+        margin: 4px 0;
+        font-size: 16px;
+        color: #080707;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .star-rating {
+        width: 2.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-subtitle {
+        margin: 0;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .shimmer {
+        width: 200px;
+        height: 23rem;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        background-color: #eee;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .link {
+        color: #0a0a0a;
+        text-decoration: none; 
+        cursor: pointer;
+    }
+    .link:hover {
+        color: #aaaaaa;
+    }
+    .menu-shimmer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh; /* Ensure the container takes full viewport height */
+    }
+    .menu-item-shimmer-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem;
+        padding: 2rem;
+        width: 40rem;
+        height: 5rem;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .menu-item-shimmer-card:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item-shimmer-content-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .menu-item-name-shimmer-loader {
+        border-radius: 2%;
+        width: 10rem;
+        height: 0.2rem;
+        padding: 5px;
+        margin: 5px;
+        animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
+    }
+
+    .menu-item-cusines-shimmer-loader {
+        border-radius: 2%;
+        width: 20rem;
+        height: 0.7rem;
+        padding: 5px;
+        margin: 15px 5px;
+        animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
+    }
+
+    .menu-item-image-shimmer-loader {
+        border-radius: 5%;
+        width: 6rem;
+        height: 3rem;
+        padding: 5px;
+        margin: 15px 5px;
+        animation: menu-item-shimmer-animation 1s linear infinite alternate forwards;
+    }
+
+    @keyframes menu-item-shimmer-animation {
+        0% {
+            background-color: hsl(200, 20%, 70%);
+        }
+
+        100% {
+            background-color: hsl(200, 20%, 95%);
+        }
+    }
+
+    .cart-items-count {
+        position: absolute;
+        font-size: 12px;
+        background-color: black;
+        border-radius: 100%;
+        color: white;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 50%;
+        transform: translate(-40%, -90%);
+    }
+    .cart-icon {
+        position: relative;
+    }
