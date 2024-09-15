@@ -11,7 +11,7 @@ export const DEBOUNCE_DELAYS = {
     WINDOW_RESIZE: 300,  // 300ms for window resize events
     TYPEAHEAD: 250       // 250ms for typeahead suggestions
 };
-export const LOCATION_SUGGESTION_API_END_POINT = `https://www.swiggy.com/dapi/misc/place-autocomplete?input=`
-export const ADDRESS_RECOMMEND_API_END_POINT = `https://www.swiggy.com/dapi/misc/address-recommend?place_id=`
+export const LOCATION_SUGGESTION_API_END_POINT = `https://web-production-d3380.up.railway.app/https://www.swiggy.com/dapi/misc/place-autocomplete?input=`
+export const ADDRESS_RECOMMEND_API_END_POINT = `https://web-production-d3380.up.railway.app/https://www.swiggy.com/dapi/misc/address-recommend?place_id=`
 export const SWIGGY_RESTAURANT_API_END_POINT = `https://www.swiggy.com/dapi/restaurants/list/v5?is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
 export const DEFAULT_LAT_LANG  = '&lat=28.61450&lng=77.30630'
