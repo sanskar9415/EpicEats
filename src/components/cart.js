@@ -6,6 +6,8 @@ import CancellationPolicy from "./CancellationPolicy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark, faListUl, faMotorcycle } from "@fortawesome/free-solid-svg-icons";
 import { toggleCart } from "../utils/cartSlice";
+import React from 'react'
+
 
 const Cart = () => {
     const cartItems = useSelector(store => store.cart.items)

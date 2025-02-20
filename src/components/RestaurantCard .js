@@ -1,4 +1,6 @@
 import { IMG_CDN_URL } from '../constants'
+import React from 'react';
+
 
 import GreenStarSvg from "../assets/GreenStarSvg";
 const RestaurantCard = ({ name,areaName, cloudinaryImageId, costForTwo, cuisines, avgRating, sla}) => {

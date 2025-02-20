@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import "../styles/cart-item.css"
 import { IMG_CDN_URL, DEFAULT_FOOD_IMAGE_URL } from "../constants"
 import { decreaseQuantity, increaseQuantity } from '../utils/cartSlice'
+import React from 'react'
 
 const CartItem = ({ detail }) => {
     console.log(detail?.card);

@@ -1,4 +1,6 @@
 import '../styles/cancellation-policy.css';
+import React from 'react'
+
 
 const CancellationPolicy = () => {
     return (

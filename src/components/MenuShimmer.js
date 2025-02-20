@@ -1,3 +1,5 @@
+import React from 'react';
+
 const MenuShimmer = () => {
     return (
         <div className="menu-shimmer-container">

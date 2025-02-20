@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { faHouse, faCartShopping, faPhone, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleCart } from '../utils/cartSlice';
 import { toggleLocation } from '../utils/locationSlice';
 import "../styles/location.css"
-import { faArrowCircleDown, faArrowDown, faCartShopping, faContactBook, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleDown, faArrowDown, faContactBook, faUser } from '@fortawesome/free-solid-svg-icons';
 
 
 const Title = () => (

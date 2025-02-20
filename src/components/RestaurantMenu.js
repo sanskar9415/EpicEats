@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MenuShimmer from "./MenuShimmer";
 import RestaurantCategory from "./RestaurantCategory";
+import React from 'react';
 
 const RestaurantMenu = () => {
     const { resId } = useParams();
@@ -13,7 +14,7 @@ const RestaurantMenu = () => {
     }, []);
 
     async function getRestaurantsInfo(){
-        const data = await fetch(`https://web-production-d3380.up.railway.app/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+        const data = await fetch(`https://web-production-28626.up.railway.app/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
         const json = await data.json();
         // console.log(json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards);
         // setRestaurant(json?.data?.cards[2]?.card?.card?.info);

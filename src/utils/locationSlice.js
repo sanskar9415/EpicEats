@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import React from 'react'
+
 
 export const locationSlice = createSlice({
     name: 'locationSlice',
